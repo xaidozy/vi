@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": ["generator/src"],
+    "java.project.outputPath": "generator/bin",
+    "java.project.referencedLibraries": [
+        "generator/lib/**/*.jar"
+    ]
+}

@@ -1,0 +1,53 @@
+.circle {
+	width: 200px;
+	height: 200px;
+	border: 14px solid var(--tp);
+	background-color: var(--tp) !important;
+	/* box-shadow: 0 0 0 7px var(--cl-edge); */
+	box-shadow: 0 0 0 7px var(--rb0);
+	border-radius: 50%;
+}
+
+.wave {
+	width: 100%;
+	height: 100%;
+	background-color: var(--cl-mid) !important;
+	/* background-color: var(--rb1) !important; */
+	border-radius: 50%;
+	box-shadow: inset 0 0 60px var(--cl-mide);
+	/* box-shadow: inset 0 0 40px var(--rb2); */
+	overflow: hidden;
+}
+
+.wave::before,
+.wave::after {
+	position: absolute;
+	content: '';
+	width: 200%;
+	height: 200%;
+	top: var(--loadingP);
+	left: -50%;
+}
+
+.wave::before {
+	border-radius: 30%;
+	background-color: var(--cl-wavei) !important;
+	/* background-color: var(--rb3) !important; */
+	animation: loadingR 4.8s linear infinite;
+}
+
+.wave::after {
+	border-radius: 40%;
+	background-color: var(--cl-wavebg) !important;
+	/* background-color: var(--rb4) !important; */
+	animation: loadingR 4.8s linear infinite;
+}
+
+@keyframes loadingR {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,58 @@
+.musicPlayerInfoItem {
+	white-space: nowrap;
+	font-family: var(--xmono);
+	width: 100%;
+	height: 24px;
+	text-align: right;
+	overflow: hidden;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.infoItemView {
+	white-space: nowrap;
+	font-family: var(--rfont);
+	width: 100%;
+	padding-left: 6px;
+	padding-right: 6px;
+	height: 24px;
+	/* line-height: 24px;
+	font-size: 20px; */
+	overflow: hidden;
+}
+
+.infoEnt {
+	border-radius: 6px !important;
+	margin-right: 0px;
+	height: 24px;
+	font-family: var(--xmono);
+	text-align: right;
+	color: #fff;
+}
+
+#ieRB {
+	background-color: #333 !important;
+}
+
+.infoEnt2 {
+	border-radius: 0px !important;
+	width: 34px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 28px;
+	font-family: var(--xmono);
+	background-position: 1px 0px;
+	background-size: 32px 32px;
+}
+
+#ie2_0 {
+	color: #aaa;
+}
+
+#ie2_1 {
+	color: #fff;
+}
+
+#ie2_2 {
+	color: #5ff;
+}
