@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			sizes="512"
+			href="./main/icon.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			type="image/x-icon"
+			sizes="512"
+			href="./main/icon.png"
+		/>
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			sizes="512"
+			href="./main/icon.png"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+		<title>Loading...</title>
+		<!-- <link
+			rel="stylesheet"
+			href="./code/typescript/css/ui/running.css"
+		/> -->
+		<script type="module" crossorigin src="/assets/index-BZhBohjH.js"></script>
+		<link rel="stylesheet" crossorigin href="/assets/index-CVQNej9E.css">
+	</head>
+	<body>
+		<script type="text/javascript">
+			function $$(name, data) {
+				var rc = window.rc;
+				var x = rc.queue[0];
+				if (!x || x.name !== name) return;
+				rc.queue.shift();
+				rc.waiting = false;
+				x.resolve(data);
+				x.done = true;
+				rc.itemChanged();
+			}
+		</script>
+		<div style="display: none"></div>
+		<!-- <script
+			type="module"
+			src="./code/test/my-element.ts"
+		></script> -->
+	</body>
+</html>
