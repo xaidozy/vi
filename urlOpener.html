@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			sizes="512"
+			href="/main/icon.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			type="image/x-icon"
+			sizes="512"
+			href="/main/icon.png"
+		/>
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			sizes="512"
+			href="/main/icon.png"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no"
+		/>
+		<title>^_^!!!</title>
+		<link rel="stylesheet" href="/main/css/reset.css" />
+	</head>
+	<style>
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+		.container {
+			width: 320px;
+			background-color: #555;
+			box-shadow: 0 0 1px 1px #000;
+			border-radius: 12px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: spaceevenly;
+		}
+		.container > * {
+			margin-top: 4px;
+			margin-bottom: 4px;
+		}
+		h1 {
+			color: #5ff;
+		}
+		p {
+			color: #ff5;
+		}
+		#url {
+			color: #f55;
+		}
+		#button {
+			padding: 2px 12px;
+			border-radius: 12px;
+			border-width: 2px;
+			color: #f5f;
+			box-shadow: 0 0 1px 1px #000;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<h1>!!!注意!!!</h1>
+			<p>您将离开本站,访问其他第三方网站.</p>
+			<h2 id="url"></h2>
+			<p>
+				我们无法保证您在该网站的隐私安全;信息安全及内容真实性,请谨慎访问!
+			</p>
+			<div id="button">点击此按钮进入网站</div>
+		</div>
+		<script>
+			const urlParams = new URLSearchParams(
+				window.location.search,
+			);
+			let url =
+				urlParams.get('url') || 'https://vi.k.vu';
+			document.getElementById('url').innerHTML = url;
+			document.getElementById('button').onmouseup =
+				() => {
+					let ar = true ? '_self' : '_blank';
+					let target = url;
+					target = target.startsWith('http')
+						? target
+						: 'http://' + target;
+					window.open(target, ar);
+				};
+		</script>
+	</body>
+</html>
