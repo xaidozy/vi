@@ -1,0 +1,12 @@
+{
+	"preStarts": [
+		"buttons/",
+		"fonts/",
+		"audio/",
+		"xicons/",
+		"icons/",
+		"ficons/",
+		"cursors/"
+	],
+	"preloads": ["images/watermarkx.png"]
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			sizes="512"
+			href="/main/icon.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			type="image/x-icon"
+			sizes="512"
+			href="/main/icon.png"
+		/>
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			sizes="512"
+			href="/main/icon.png"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no"
+		/>
+		<title>^_^!!!</title>
+		<script type="module" crossorigin src="/assets/urlOpener-Dldh2jOP.js"></script>
+		<link rel="modulepreload" crossorigin href="/assets/style-BuzQs9qf.js">
+		<link rel="stylesheet" crossorigin href="/assets/style-CeFgRVU4.css">
+	</head>
+
+	<body>
+		<style>
+			body {
+				overflow-y: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+			}
+			.container123 {
+				width: 320px;
+				background-color: var(--cl2);
+				box-shadow: 0 0 1px 1px var(--rb0);
+				border-radius: 12px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: spaceevenly;
+			}
+			.container123 > * {
+				margin-top: 4px;
+				margin-bottom: 4px;
+			}
+			h1 {
+				color: #5ff;
+			}
+			p {
+				color: #ff5;
+			}
+			#url {
+				color: #f55;
+			}
+			#button {
+				padding: 2px 12px;
+				border-radius: 12px;
+				border-width: 1px;
+				color: #f5f;
+				box-shadow: 0 0 1px 1px var(--rb0);
+			}
+		</style>
+		<div class="container123">
+			<h1>!!!注意!!!</h1>
+			<p>您将离开本站,访问其他第三方网站.</p>
+			<h2 id="url"></h2>
+			<p>
+				无法保证您在该网站的隐私安全;信息安全及内容真实性,请谨慎访问!
+			</p>
+			<div id="button">点击此按钮进入网站</div>
+		</div>
+		<script>
+			const urlParams = new URLSearchParams(
+				window.location.search,
+			);
+			let url =
+				urlParams.get('url') || 'https://vi.k.vu';
+			document.getElementById('url').innerHTML = url;
+			document.getElementById('button').onmouseup =
+				() => {
+					let ar = true ? '_self' : '_blank';
+					let target = url;
+					target = target.startsWith('http')
+						? target
+						: 'http://' + target;
+					window.open(target, ar);
+				};
+		</script>
+	</body>
+</html>
